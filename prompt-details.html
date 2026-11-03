@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#100e18">
+    <title>Prompt Details — Promptzila</title>
+
+    <link rel="icon" type="image/png" href="Assets/images/icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="prompt-details.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+
+    <script>
+        if (window.supabase && window.PROMPTZILA_CONFIG) {
+            window.supabaseClient = window.supabase.createClient(
+                window.PROMPTZILA_CONFIG.SUPABASE_URL,
+                window.PROMPTZILA_CONFIG.SUPABASE_ANON_KEY
+            );
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            <img src="./Assets/images/logo.png"
+                 alt="Promptzila Logo"
+                 class="brand-logo">
+        </a>
+
+        <button class="mobile-menu" id="mobileMenu"
+                aria-label="Open navigation">☰</button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+
+            <div class="nav-dropdown">
+                <a href="index.html#categories">Categories ▾</a>
+
+                <div class="dropdown-menu">
+                    <a href="index.html#gallery">Boys Prompts</a>
+                    <a href="index.html#gallery">Girls Prompts</a>
+                    <a href="index.html#gallery">Couple Prompts</a>
+                    <a href="index.html#gallery">Portrait Prompts</a>
+                    <a href="index.html#gallery">Cinematic Prompts</a>
+                    <a href="index.html#gallery">Travel Prompts</a>
+                    <a href="index.html#gallery">Wedding Prompts</a>
+                </div>
+            </div>
+
+            <a href="index.html#gallery">Explore</a>
+            <a href="about.html">About Us</a>
+        </nav>
+    </header>
+
+
+    <!-- PROMPT DETAILS -->
+    <main class="details-container">
+
+        <a href="index.html" class="back-button">← Back</a>
+
+        <div id="loadingMessage" class="details-message">
+            Loading prompt...
+        </div>
+
+        <div id="errorMessage" class="details-message" hidden>
+            Prompt not found. Please go back and try again.
+        </div>
+
+        <article id="promptDetails" hidden>
+
+            <!-- PROMPT IMAGE -->
+            <div class="detail-image-wrap">
+                <img id="detailImage" src="" alt="">
+            </div>
+
+            <!-- PROMPT TITLE -->
+            <h1 id="detailTitle"></h1>
+
+            <!-- SOCIAL BUTTONS -->
+            <div class="social-buttons">
+
+                <button class="social-btn instagram" type="button">
+                    <img src="./Assets/images/2227-removebg-preview.png" alt="Instagram">
+                    <span>Instagram</span>
+                </button>
+
+                <button class="social-btn whatsapp" type="button">
+                    <img src="Assets/images/b747da80-086f-4a3b-bccd-7d68182b0b75.jpg" alt="WhatsApp">
+                    <span>WhatsApp</span>
+                </button>
+
+            </div>
+
+            <!-- INTRO -->
+            <p class="copy-intro">
+                Copy this photo prompt and paste it into ChatGPT
+                or Gemini with your own photo.
+            </p>
+
+            <!-- PROMPT BOX -->
+            <section class="prompt-box">
+
+                <div class="prompt-box-header">
+                    <span>PROMPT</span>
+
+                    <button id="copyPrompt" type="button">
+                        Copy Prompt
+                    </button>
+                </div>
+
+                <div id="detailPrompt" class="detail-prompt"></div>
+
+            </section>
+
+
+            <!-- HOW TO USE -->
+            <section class="how-to-use">
+
+                <h2>How to Use This Photo Prompt</h2>
+
+                <ol>
+                    <li>
+                        Click <strong>Copy Prompt</strong> to copy the full prompt.
+                    </li>
+
+                    <li>
+                        Open <strong>ChatGPT</strong> and start a new chat.
+                    </li>
+
+                    <li>
+                        Upload the photo you want to transform.
+                    </li>
+
+                    <li>
+                        Paste the copied prompt and send it.
+                    </li>
+
+                    <li>
+                        If the first result isn't quite right,
+                        try generating again for a better result.
+                    </li>
+                </ol>
+
+            </section>
+
+        </article>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="details-footer">
+
+        <div class="footer-logo">
+            <span class="logo-icon">P</span>
+            <span>Prompt<span class="logo-highlight">zila</span></span>
+        </div>
+
+        <p>
+            Discover. Copy. Create. Your destination for amazing AI prompts.
+        </p>
+
+        <h4>MENU</h4>
+
+        <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#gallery">Explore</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+        </div>
+
+        <h4>COLLECTIONS</h4>
+
+        <div class="footer-links collection-links">
+            <a href="index.html#gallery">Boys Prompts</a>
+            <a href="index.html#gallery">Girls Prompts</a>
+            <a href="index.html#gallery">Couple Prompts</a>
+            <a href="index.html#gallery">Portrait Prompts</a>
+            <a href="index.html#gallery">Cinematic Prompts</a>
+            <a href="index.html#gallery">Photo Collage Prompts</a>
+            <a href="index.html#gallery">Cartoon & Anime Prompts</a>
+            <a href="index.html#gallery">Travel Prompts</a>
+            <a href="index.html#gallery">Festival Prompts</a>
+            <a href="index.html#gallery">Birthday Prompts</a>
+            <a href="index.html#gallery">Selfie Prompts</a>
+            <a href="index.html#gallery">Horror Prompts</a>
+            <a href="index.html#gallery">Wedding Prompts</a>
+        </div>
+
+        <div class="copyright">
+            © 2026 Promptzila. All rights reserved.
+        </div>
+
+    </footer>
+
+    <script src="prompt-details.js"></script>
+
+</body>
+</html>

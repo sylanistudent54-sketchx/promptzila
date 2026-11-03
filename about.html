@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Promptzila and our AI photo prompt library.">
+    <meta name="theme-color" content="#100e18">
+    <title>About Us — Promptzila</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-content {
+            max-width: 950px;
+            margin: 65px auto;
+            padding: 0 25px 70px;
+        }
+        .page-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+        .page-heading span {
+            color: #a855f7;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+        .page-heading h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin: 15px 0;
+        }
+        .page-heading p {
+            color: #aaa4b8;
+            line-height: 1.8;
+        }
+        .content-card {
+            background: #1c1928;
+            border: 1px solid #393247;
+            padding: 28px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+        }
+        .content-card h2 {
+            color: #c78cff;
+            font-size: 21px;
+            margin-bottom: 15px;
+        }
+        .content-card p {
+            color: #aaa4b8;
+            line-height: 1.9;
+            font-size: 14px;
+        }
+        @media(max-width:550px) {
+            .content-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <span class="logo-icon">P</span>
+        <span>Prompt<span class="logo-highlight">zila</span></span>
+    </a>
+
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#gallery">Explore</a>
+        <a href="about.html">About Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </nav>
+</header>
+
+<main class="page-content">
+
+    <div class="page-heading">
+        <span>GET TO KNOW US</span>
+        <h1>About <span style="color:#a855f7">Promptzila</span></h1>
+        <p>Discover. Copy. Create. Your destination for amazing AI prompts.</p>
+    </div>
+
+    <section class="content-card">
+        <h2>Who We Are</h2>
+        <p>
+            Welcome to Promptzila, a creative platform for discovering
+            AI photo editing prompts. We bring together creative ideas
+            and prompts to help users explore new possibilities with
+            AI image generation tools.
+        </p>
+    </section>
+
+    <section class="content-card">
+        <h2>What We Do</h2>
+        <p>
+            Promptzila provides a collection of AI photo prompts across
+            different categories. You can explore prompts, view images,
+            copy prompt text and use it with compatible AI tools to
+            create your own images.
+        </p>
+    </section>
+
+    <section class="content-card">
+        <h2>Our Mission</h2>
+        <p>
+            Our mission is to make AI creativity easier and more
+            accessible. We want to help everyone discover inspiration,
+            experiment with creative ideas and enjoy creating AI images.
+        </p>
+    </section>
+
+    <section class="content-card">
+        <h2>Why Choose Promptzila?</h2>
+        <p>
+            We aim to provide an easy-to-use prompt library with
+            categories, image previews and convenient copy features.
+            Whether you are a beginner or an experienced creator,
+            Promptzila is here to inspire your next creation.
+        </p>
+    </section>
+
+    <section class="content-card">
+        <h2>Get in Touch</h2>
+        <p>
+            Have a question, suggestion or feedback?
+            We would love to hear from you.
+            <a href="contact.html" style="color:#c78cff">Contact Us</a>.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer-logo">
+        <span class="logo-icon">P</span>
+        <span>Prompt<span class="logo-highlight">zila</span></span>
+    </div>
+
+    <p>Discover. Copy. Create. Your destination for amazing AI prompts.</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#gallery">Explore</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <div class="copyright">© 2026 Promptzila. All rights reserved.</div>
+</footer>
+
+<script>
+    const menu = document.getElementById("mobileMenu");
+    const nav = document.getElementById("navLinks");
+
+    menu.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+</script>
+
+</body>
+</html>

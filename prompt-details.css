@@ -1,0 +1,278 @@
+
+/* ========================================
+   PROMPT DETAILS PAGE
+======================================== */
+
+.details-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 25px 90px;
+}
+
+
+/* BACK BUTTON */
+
+.back-button {
+    display: inline-block;
+    color: #ddd5eb;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.back-button:hover {
+    color: var(--light);
+}
+
+
+/* LOADING AND ERROR */
+
+.details-message {
+    text-align: center;
+    color: var(--muted);
+    padding: 70px 15px;
+}
+
+
+/* PROMPT IMAGE */
+
+.detail-image-wrap {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.detail-image-wrap img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 650px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 12px;
+    margin: auto;
+}
+
+
+/* PROMPT TITLE */
+
+#detailTitle {
+    text-align: center;
+    font-size: clamp(21px, 3vw, 30px);
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+
+/* ========================================
+   SOCIAL BUTTONS
+======================================== */
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 22px 0 30px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.social-btn img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}
+
+.instagram {
+    background: linear-gradient(110deg, #d67290, #c07098);
+    box-shadow: 0 4px 15px rgba(243, 238, 240, 0.25);
+}
+
+.whatsapp {
+    background: #16b85d;
+    box-shadow: 0 4px 15px rgba(22, 184, 93, 0.2);
+}
+
+.social-btn:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+
+/* COPY INTRO */
+
+.copy-intro {
+    color: #c5bdcf;
+    font-size: 13px;
+    margin-bottom: 18px;
+    line-height: 1.7;
+}
+
+
+/* PROMPT BOX */
+
+.prompt-box {
+    background: #1c1928;
+    border: 1px solid #393247;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.prompt-box-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 15px;
+    border-bottom: 1px solid #393247;
+}
+
+.prompt-box-header span {
+    color: #bdb4cc;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.prompt-box-header button {
+    background: #893ee5;
+    color: white;
+    border: 0;
+    padding: 9px 14px;
+    border-radius: 7px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.detail-prompt {
+    padding: 20px;
+    color: #ddd6e8;
+    font-size: 13px;
+    line-height: 1.8;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+
+/* ========================================
+   HOW TO USE SECTION
+======================================== */
+
+.how-to-use {
+    max-width: 850px;
+    margin: 45px auto 10px;
+    padding: 30px;
+    background: #171525;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+}
+
+.how-to-use h2 {
+    color: #ffffff;
+    font-size: 25px;
+    margin-bottom: 22px;
+    line-height: 1.4;
+}
+
+.how-to-use ol {
+    padding-left: 25px;
+    color: #c5c2d3;
+}
+
+.how-to-use li {
+    padding-left: 8px;
+    margin-bottom: 15px;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.how-to-use li:last-child {
+    margin-bottom: 0;
+}
+
+.how-to-use strong {
+    color: #ffffff;
+}
+
+
+/* FOOTER */
+
+.details-footer h4 {
+    color: #aaa0bb;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin: 25px 0 12px;
+}
+
+.collection-links {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.collection-links a {
+    background: #211932;
+    border-radius: 20px;
+    padding: 8px 13px;
+    font-size: 12px;
+}
+
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .details-container {
+        padding: 25px 15px 60px;
+    }
+
+    .detail-image-wrap img {
+        max-height: 520px;
+    }
+
+    .social-buttons {
+        gap: 8px;
+    }
+
+    .social-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .social-btn img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .detail-prompt {
+        padding: 15px;
+    }
+
+    .how-to-use {
+        margin: 30px 15px 10px;
+        padding: 22px;
+    }
+
+    .how-to-use h2 {
+        font-size: 21px;
+    }
+
+    .how-to-use li {
+        font-size: 14px;
+    }
+}

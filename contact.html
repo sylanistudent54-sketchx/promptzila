@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Promptzila for questions, feedback and suggestions.">
+    <meta name="theme-color" content="#100e18">
+    <title>Contact Us — Promptzila</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .contact-container {
+            max-width: 850px;
+            margin: 65px auto;
+            padding: 0 20px 70px;
+        }
+
+        .contact-heading {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-heading span {
+            color: #a855f7;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .contact-heading h1 {
+            font-size: clamp(32px, 5vw, 48px);
+            margin: 15px 0;
+        }
+
+        .contact-heading p {
+            color: #aaa4b8;
+            line-height: 1.8;
+        }
+
+        .contact-card {
+            background: #1c1928;
+            border: 1px solid #393247;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        .contact-card label {
+            display: block;
+            margin: 18px 0 8px;
+            font-size: 13px;
+            color: #ddd6e9;
+        }
+
+        .contact-card input,
+        .contact-card textarea {
+            width: 100%;
+            padding: 14px;
+            background: #15121d;
+            border: 1px solid #393247;
+            border-radius: 9px;
+            color: white;
+            outline: none;
+            font: 14px Inter, Arial;
+        }
+
+        .contact-card input:focus,
+        .contact-card textarea:focus {
+            border-color: #a855f7;
+        }
+
+        .contact-card textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .send-button {
+            width: 100%;
+            margin-top: 22px;
+            padding: 15px;
+            border: 0;
+            border-radius: 9px;
+            background: #893ee5;
+            color: white;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .send-button:hover {
+            background: #a855f7;
+        }
+
+        .email-info {
+            text-align: center;
+            margin-top: 30px;
+            color: #aaa4b8;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .email-info a {
+            color: #c78cff;
+            text-decoration: none;
+        }
+
+        @media(max-width:550px) {
+            .contact-card { padding: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="navbar">
+    <a href="index.html" class="logo">
+        <span class="logo-icon">P</span>
+        <span>Prompt<span class="logo-highlight">zila</span></span>
+    </a>
+
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+
+    <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="index.html#categories">Categories</a>
+        <a href="index.html#gallery">Explore</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </nav>
+</header>
+
+<main class="contact-container">
+
+    <div class="contact-heading">
+        <span>WE WOULD LOVE TO HEAR FROM YOU</span>
+        <h1>Contact <span style="color:#a855f7">Us</span></h1>
+        <p>Have a question, suggestion or feedback? Send us a message!</p>
+    </div>
+
+    <form class="contact-card" id="contactForm">
+
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" placeholder="Enter subject" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit" class="send-button">Send Message</button>
+
+    </form>
+
+    <div class="email-info">
+        <p>You can also contact us directly:</p>
+        <a href="mailto:aliyan.shaikh.ajs2@gmail.com">
+            aliyan.shaikh.ajs2@gmail.com
+        </a>
+    </div>
+
+</main>
+
+<footer>
+    <div class="footer-logo">
+        <span class="logo-icon">P</span>
+        <span>Prompt<span class="logo-highlight">zila</span></span>
+    </div>
+
+    <p>Discover. Copy. Create. Your destination for amazing AI prompts.</p>
+
+    <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#gallery">Explore</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+    </div>
+
+    <div class="copyright">© 2026 Promptzila. All rights reserved.</div>
+</footer>
+
+<script>
+    const menu = document.getElementById("mobileMenu");
+    const nav = document.getElementById("navLinks");
+
+    menu.addEventListener("click", () => {
+        nav.classList.toggle("open");
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const subject = document.getElementById("subject").value;
+        const message = document.getElementById("message").value;
+
+        const body =
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n\n" +
+            "Message:\n" + message;
+
+        const mailto =
+            "mailto:aliyan.shaikh.ajs2@gmail.com" +
+            "?subject=" + encodeURIComponent(subject) +
+            "&body=" + encodeURIComponent(body);
+
+        window.location.href = mailto;
+    });
+</script>
+
+</body>
+</html>
