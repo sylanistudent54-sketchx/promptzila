@@ -262,5 +262,61 @@ menu.addEventListener("click", () => {
 // INITIALIZE
 // ========================================
 
+
+// ========================================
+// FAVORITES NAVIGATION
+// ========================================
+
+function showAllPrompts() {
+    showingFavorites = false;
+    activeCategory = "All";
+
+    search.value = "";
+
+    document.querySelectorAll(".filter-btn").forEach(x =>
+        x.classList.remove("active")
+    );
+
+    document.querySelector('.filter-btn[data-category="All"]')
+        ?.classList.add("active");
+
+    render();
+}
+
+if (favoritesLink) {
+    favoritesLink.addEventListener("click", () => {
+        showingFavorites = true;
+        activeCategory = "All";
+
+        document.querySelectorAll(".filter-btn").forEach(x =>
+            x.classList.remove("active")
+        );
+
+        document.querySelector('.filter-btn[data-category="All"]')
+            ?.classList.add("active");
+
+        render();
+
+        document.getElementById("gallery").scrollIntoView({
+            behavior: "smooth"
+        });
+
+        nav.classList.remove("open");
+        menu.setAttribute("aria-expanded", "false");
+        menu.textContent = "☰";
+    });
+}
+
+// Home par click karne se saari images wapas
+document.getElementById("homeNavLink")?.addEventListener("click", () => {
+    showAllPrompts();
+});
+
+// Explore par click karne se saari images wapas
+document.getElementById("exploreNavLink")?.addEventListener("click", () => {
+    showAllPrompts();
+});
+
+
 render();
 loadLive();
